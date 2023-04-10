@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="io.uslugi.streamer.ui.LoginFragment"
+        android:label="LoginFragment">
+
+        <action
+            android:id="@+id/action_loginFragment_to_qrFragment"
+            app:destination="@id/qrFragment" />
+    </fragment>
+
+    <activity
+        android:id="@+id/launchActivity"
+        android:name="io.uslugi.streamer.LaunchActivity"
+        android:label="LaunchActivity" />
+
+    <fragment
+        android:id="@+id/qrFragment"
+        android:name="io.uslugi.streamer.ui.qrfragment.QrFragment"
+        android:label="QrFragment">
+
+        <action
+            android:id="@+id/action_qrFragment_to_launchActivity"
+            app:destination="@id/launchActivity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/testResultFragment"
+        android:name="io.uslugi.streamer.ui.testresultscreen.TestResultFragment"
+        android:label="TestResultFragment">
+
+        <action
+            android:id="@+id/action_testResultFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+</navigation>

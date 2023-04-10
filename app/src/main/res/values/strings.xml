@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Generic -->
+    <string name="app_name">Видеонаблюдение</string>
+
+    <!-- Landing -->
+    <string name="VIDEO">Видео</string>
+    <string name="STREAMING">Излъчване</string>
+    <string name="FROM_SIK">от СИК</string>
+    <string name="REGISTER_SCAN_QR_BUTTON">Сканирайте \n QR код</string>
+    <string name="START_STREAM_HINT">За да стартирате излъчване</string>
+    <string name="VERSION_LABEL">Версия:</string>
+
+    <!-- Content descriptions -->
+    <string name="CONTENT_DESCRIPTION_ARROW_DOWN_ICON">Икона стрелка надолу</string>
+    <string name="CONTENT_DESCRIPTION_THERMOMETER">Термометър</string>
+
+    <!-- Succeeded/failed screens -->
+    <string name="TEST_SETUP_SUCCESS_MESSAGE">Тестът е успешен</string>
+    <string name="TEST_SETUP_FAIL_MESSAGE">Тестът е неуспешен</string>
+    <string name="TEST_SIK_SUCCESS_OR_FAIL_MESSAGE">Благодарим за участието в теста - СИК № %1$s!</string>
+    <string name="TEST_SCREEN_CLOSE_BUTTON">ЗАТВОРИ</string>
+
+    <!-- QR scanning -->
+    <string name="REGISTER_SCAN_CODE_EXPLANATION">Позиционирайте кода, показан на екрана на Вашия компютър в рамката на прозорчето.</string>
+    <string name="ERROR_PROBLEM_WITH_ACCESS_TO_CAMERA">Възникна проблем с достъпа до камерата</string>
+
+    <!-- Error Messages -->
+    <string name="ERROR_NO_INTERNET">Няма интернет връзка</string>
+    <string name="ERROR_INTERNAL_SERVER_ERROR_MESSAGE">Изглежда в момента имаме проблем с услугата. Моля опитайте пак по-късно.</string>
+    <string name="ERROR_QR_CODE_TITLE">Грешка при сканиране на QR код</string>
+    <string name="ERROR_FAILED_STORING_UDI">Грешка при запазване на UDI</string>
+    <string name="ERROR_INVALID_UDI">Невалиден UDI</string>
+    <string name="ERROR_FAILED_STORING_SECTION">Грешка при запазване на секция</string>
+    <string name="ERROR_FAILED_STORING_RTMP">Грешка при запазване на RTMP адрес</string>
+    <string name="PERMISSION_DENIED_CAMERA">Не е разрешен достъп до камерата. Моля отидете в Настройки, за да го позволите.</string>
+    <string name="ERROR_UNKNOWN_EXCEPTION">Възникна непредвидена грешка</string>
+    <string name="ERROR_CREATING_H264_PROFILE">Грешка при създаване на H.265 Main Profile</string>
+    <string name="please_wait">Стрийминга не е готов. Моля изчакайте&#8230;</string>
+    <string name="not_connected">Няма интернет връзка.</string>
+    <string name="no_uri">Няма активни връзки. Отидете в настройки и създайте поне една.</string>
+    <string name="recording_to_file_initial">Няма активни връзки. Записва се само във файл.</string>
+    <string name="recording_to_file">Всички настроени връзки се провалиха. Записва се само във файл.</string>
+    <string name="unknown_fail">Възникна непредвидена грешка.</string>
+    <string name="audio_status_encoder_fail">Проблем с кодирането на аудиото</string>
+    <string name="audio_status_fail">Проблем със записването на аудиото</string>
+    <string name="video_status_encoder_fail">Проблем с кодирането на видеото. Пробвайте да промените резолюцията.</string>
+    <string name="video_status_fail">Проблем със записването на видеото</string>
+    <string name="no_camera_found">Неуспешна връзка с камерата. Може би се използва от друго приложение.</string>
+    <string name="unsupported_auth">Приложението не поддържа този тип RTMP оторизация. Моля, използвайте rtmpauth URL параметър или друг \"Тип на целта\" за упълномощаване.</string>
+    <string name="permissions_denied">Няма достъп до камера/микрофон</string>
+    <string name="permissions_denied_hint">Без разрешение за достъп до камера и микрофон, приложението не може да заснема видео и аудио.</string>
+    <string name="permissions_goto_settings">Отидете в Настройки</string>
+    <string name="permissions_try_again">Опитайте пак</string>
+    <string name="permissions_quit">Изход</string>
+    <string name="layer_error_invalid_url">Невалиден URL адрес на изображението</string>
+    <string name="layer_error_server_status">Сървърът върна %d грешка</string>
+    <string name="layer_error_download_failed">Неуспешно изтегляне на изображение</string>
+    <string name="layer_error_save_failed">Неуспешно запазване на изображението</string>
+    <string name="layer_error_too_large">Файлът е твърде голям за изтегляне</string>
+    <string name="layer_error_mime_type">Неподдържан MIME тип</string>
+    <string name="layer_error_bad_image">Неуспешно отваряне на изображението</string>
+    <string name="file_log_hint">Не записва във файл. Отидете в настройките за запис, за да го включите.</string>
+    <string name="audio_input_sharing_warning">Аудио входът на приложението е прихванат от друго приложение. Не се предава поточно аудио.</string>
+    <string name="err_record_failed">Записването на стрийма се провали</string>
+    <string name="invalid_uri">Невалиден URL.</string>
+    <string name="missing_scheme">Невалидена URL схема.</string>
+    <string name="unsupported_scheme">Приложението не поддържа този тип URL схема.</string>
+    <string name="unsupported_talkback_scheme">Приложението не поддържа този тип URL.</string>
+    <string name="missing_uri">Моля, въведете URL адрес за RTMP/стрийм.</string>
+    <string name="missing_host">Невалиден URL. Не намира адреса на хоста.</string>
+    <string name="missing_port">Невалиден URL. Не намира валиден порт.</string>
+    <string name="missing_app_stream">Невалиден URL. Неуспешно откриване на RTMP/стрийм.</string>
+    <string name="userinfo_found">Потребителска информация (\"%1$s\") е намерене в URL. Моля, попълнете \"Login\" и \"Password\" полетата.</string>
+    <string name="streamid_found">SRT streamid параметър е намерен в URL. Моля, попълнете \"streamid\" вместо да дефинирате този параметър.</string>
+    <string name="unsupported_resolution_title">Промяна в разделителната способност</string>
+    <string name="unsupported_resolution">%1$s разделителната способност не се поддържа от видео енкодера на устройството.\n
+Разделителната способност е 1280x720</string>
+
+    <!-- Streamer -->
+    <string name="STREAMER_START_TEXT">СТАРТ</string>
+    <string name="STREAMER_STOP_TEXT">СТОП</string>
+
+    <!-- Alert Dialogue Messages -->
+    <string name="NO_TEXT">Не</string>
+    <string name="ATTENTION_TEXT">Внимание</string>
+    <string name="STOP_RECORDING_MESSAGE_TEXT">Сигурни ли сте, че искате да прекратите видео заснемането?</string>
+    <string name="CONFIRM_COMPLETE_RECORDING_TEXT">Да, прекрати</string>
+
+    <!-- Connection -->
+    <string name="connecting">Свързване&#8230;</string>
+    <string name="connection_status">%1$s: %2$s</string>
+    <string name="connection_status_fail">%1$s: Неуспешна връзка със сървъра.</string>
+    <string name="connection_status_auth_fail">%1$s: Неуспешна автентикация. Моля, проверете потребителското си име и парола.</string>
+    <string name="connection_status_unknown_fail">%1$s: Възникна непредвидена греша при свързване.</string>
+    <string name="connection_status_fail_with_info">%1$s: Неуспешно свързване: %2$s</string>
+    <string name="connection_status_timeout">%1$s: Свързването отнема твърде много.</string>
+    <string name="connection_status_retrying">%1$s Повторен опит след %2$d сек.</string>
+
+    <!-- Misc -->
+    <string name="flash_torch">Включи светкавица</string>
+    <string name="flash_off">Изключи светкавица</string>
+    <string name="bluetooth_connected">Bluetooth SCO свързан</string>
+    <string name="no_bluetooth">Изчаква се bluetooth SCO&#8230;</string>
+    <string name="hevc_over_rtmp_warning">%1$s: Поддръжката на RTMP за HEVC е нестандартна експериментална функция.</string>
+    <string name="low_maxbw_warning">Изглежда \"maxbw\" параметъра на SRT връзката има грешна стойност, затова стойността е сложена да е \"0\" за да отговаря на входната скорост. Препоръчваме ви да използвате тази стойност по подразбиране.</string>
+    <string name="notification_idle">В очакване</string>
+    <string name="notification_connecting">&lt;i>Свързване&#8230;&lt;/i></string>
+    <string name="channel_name">Услуга на преден план</string>
+    <string name="channel_description">Докосването на известието ще покаже приложението, сякаш е било докоснато в стартовия панел на приложения.</string>
+    <string name="action_title_start">Старт</string>
+    <string name="action_title_stop">Стоп</string>
+    <string name="action_title_pause">Пауза</string>
+    <string name="action_title_resume">Продължи</string>
+    <string name="action_title_exit">Изход</string>
+    <string name="layer_test_error">%s: %s\n</string>
+    <string name="fmt_log">%1$s %2$s</string>
+    <string name="saved_to">Запазено в %1$s</string>
+    <string name="press_again_to_quit">Натиснете \"НАЗАД\" отново за изход от приложението</string>
+
+</resources>

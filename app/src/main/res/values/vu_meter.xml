@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="AudioLevelMeter">
+        <attr name="ledCount" format="integer" />
+        <attr name="redCount" format="integer" />
+        <attr name="yellowCount" format="integer" />
+        <attr name="channels" format="integer" />
+    </declare-styleable>
+
+</resources>

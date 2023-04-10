@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Generic -->
+    <color name="white">#FFFFFF</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="red">#FF0000</color>
+    <color name="lime">#00FF00</color>
+    <color name="black">#000000</color>
+
+    <!-- Specific -->
+    <color name="sik_stream_yellow">#FBB300</color>
+    <color name="sik_succeeded">#199117</color>
+    <color name="sik_failed">#a62726</color>
+    <color name="seventy_percent_white">#B3FFFFFF</color>
+    <color name="sik_stream_dark_text_color">#142D32</color>
+
+</resources>

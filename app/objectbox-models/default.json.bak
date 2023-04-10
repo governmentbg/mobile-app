@@ -1,0 +1,419 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:7954885830087476369",
+      "lastPropertyId": "20:4251409047697132414",
+      "name": "Connection",
+      "properties": [
+        {
+          "id": "1:2361487385399421665",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:4572806561180650306",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:8386780568309015362",
+          "name": "url",
+          "type": 9
+        },
+        {
+          "id": "4:1496129950917063305",
+          "name": "mode",
+          "type": 5
+        },
+        {
+          "id": "5:2586440858565738744",
+          "name": "active",
+          "type": 1
+        },
+        {
+          "id": "6:3098040394108513054",
+          "name": "username",
+          "type": 9
+        },
+        {
+          "id": "7:7077264584253588814",
+          "name": "password",
+          "type": 9
+        },
+        {
+          "id": "8:4004646357495859939",
+          "name": "auth",
+          "type": 5
+        },
+        {
+          "id": "9:7182797628971617632",
+          "name": "passphrase",
+          "type": 9
+        },
+        {
+          "id": "10:7869770654119326465",
+          "name": "pbkeylen",
+          "type": 5
+        },
+        {
+          "id": "11:3232140282434573789",
+          "name": "latency",
+          "type": 5
+        },
+        {
+          "id": "12:5408498777172278654",
+          "name": "maxbw",
+          "type": 5
+        },
+        {
+          "id": "13:7341199888318604397",
+          "name": "streamid",
+          "type": 9
+        },
+        {
+          "id": "14:894538337948599104",
+          "name": "srtMode",
+          "type": 5
+        },
+        {
+          "id": "15:1262519826935205513",
+          "name": "ristProfile",
+          "type": 5
+        },
+        {
+          "id": "16:5345907833512645711",
+          "name": "retransmitalgo",
+          "type": 5
+        },
+        {
+          "id": "17:2151843518427009887",
+          "name": "discovery",
+          "type": 9
+        },
+        {
+          "id": "18:8798524820538542970",
+          "name": "json",
+          "type": 9
+        },
+        {
+          "id": "19:6627877381817344395",
+          "name": "metadata",
+          "type": 9
+        },
+        {
+          "id": "20:4251409047697132414",
+          "name": "preview",
+          "type": 1
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:162701690512753232",
+      "lastPropertyId": "21:2398798631287937907",
+      "name": "IncomingConnection",
+      "properties": [
+        {
+          "id": "1:9018883887870333216",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:3061601378704619960",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:8745847464726315118",
+          "name": "url",
+          "type": 9
+        },
+        {
+          "id": "4:6536544988259032660",
+          "name": "mode",
+          "type": 5
+        },
+        {
+          "id": "5:546798627831783551",
+          "name": "active",
+          "type": 1
+        },
+        {
+          "id": "6:39085109316548987",
+          "name": "username",
+          "type": 9
+        },
+        {
+          "id": "7:2053697452743922130",
+          "name": "password",
+          "type": 9
+        },
+        {
+          "id": "8:483712271375237113",
+          "name": "auth",
+          "type": 5
+        },
+        {
+          "id": "9:6169653603648259838",
+          "name": "passphrase",
+          "type": 9
+        },
+        {
+          "id": "10:6112152212435132624",
+          "name": "pbkeylen",
+          "type": 5
+        },
+        {
+          "id": "11:7438662126015475188",
+          "name": "latency",
+          "type": 5
+        },
+        {
+          "id": "12:4586432143857491501",
+          "name": "maxbw",
+          "type": 5
+        },
+        {
+          "id": "13:1412628077007285936",
+          "name": "streamid",
+          "type": 9
+        },
+        {
+          "id": "14:3287916423689040954",
+          "name": "srtMode",
+          "type": 5
+        },
+        {
+          "id": "15:7464442024024484655",
+          "name": "ristProfile",
+          "type": 5
+        },
+        {
+          "id": "16:2601375183489298504",
+          "name": "buffering",
+          "type": 5
+        },
+        {
+          "id": "17:3612046983408825727",
+          "name": "retransmitalgo",
+          "type": 5
+        },
+        {
+          "id": "18:3282535724270280265",
+          "name": "discovery",
+          "type": 9
+        },
+        {
+          "id": "19:7517876853598867643",
+          "name": "json",
+          "type": 9
+        },
+        {
+          "id": "20:1027052796635694924",
+          "name": "metadata",
+          "type": 9
+        },
+        {
+          "id": "21:2398798631287937907",
+          "name": "preview",
+          "type": 1
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:5472301419566758316",
+      "lastPropertyId": "13:7836242756352611261",
+      "name": "ImageLayerConfig",
+      "properties": [
+        {
+          "id": "1:865971076932615208",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:4475498983906710098",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:6323608920827321266",
+          "name": "url",
+          "type": 9
+        },
+        {
+          "id": "4:259464350584371318",
+          "name": "active",
+          "type": 1
+        },
+        {
+          "id": "5:929831995216854273",
+          "name": "zIndex",
+          "type": 5
+        },
+        {
+          "id": "6:2532435410604372191",
+          "name": "displaySize",
+          "type": 7
+        },
+        {
+          "id": "7:7592931374902010435",
+          "name": "displayPosX",
+          "type": 7
+        },
+        {
+          "id": "8:542824748868652013",
+          "name": "displayPosY",
+          "type": 7
+        },
+        {
+          "id": "9:5929895738923563223",
+          "name": "cacheUrl",
+          "type": 9
+        },
+        {
+          "id": "10:387188452372853980",
+          "name": "httpEtag",
+          "type": 9
+        },
+        {
+          "id": "11:1255511416913178427",
+          "name": "httpLastModified",
+          "type": 9
+        },
+        {
+          "id": "12:6328709684074324621",
+          "name": "updateInterval",
+          "type": 5
+        },
+        {
+          "id": "13:7836242756352611261",
+          "name": "type",
+          "type": 5
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "4:8559543064585671348",
+      "lastPropertyId": "22:5275065120401496850",
+      "name": "WebLayerConfig",
+      "properties": [
+        {
+          "id": "1:3318896273145847395",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:5131335842591700913",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:555398499810206549",
+          "name": "url",
+          "type": 9
+        },
+        {
+          "id": "4:2935238100526344094",
+          "name": "active",
+          "type": 1
+        },
+        {
+          "id": "5:4522950597777372659",
+          "name": "width",
+          "type": 5
+        },
+        {
+          "id": "6:7701456171476827825",
+          "name": "height",
+          "type": 5
+        },
+        {
+          "id": "7:4479034076295883647",
+          "name": "displaySize",
+          "type": 7
+        },
+        {
+          "id": "8:4049958245480867504",
+          "name": "displayPosX",
+          "type": 7
+        },
+        {
+          "id": "9:5561817298220503090",
+          "name": "displayPosY",
+          "type": 7
+        },
+        {
+          "id": "10:7917569470375728019",
+          "name": "cacheUrl",
+          "type": 9
+        },
+        {
+          "id": "11:2442911726061788458",
+          "name": "zIndex",
+          "type": 5
+        },
+        {
+          "id": "12:635521573420638646",
+          "name": "httpEtag",
+          "type": 9
+        },
+        {
+          "id": "13:1012383251659534858",
+          "name": "httpLastModified",
+          "type": 9
+        },
+        {
+          "id": "14:670271787811240787",
+          "name": "updateInterval",
+          "type": 5
+        },
+        {
+          "id": "15:4664715808375248836",
+          "name": "type",
+          "type": 5
+        },
+        {
+          "id": "16:6909408320928224893",
+          "name": "customCss",
+          "type": 9
+        },
+        {
+          "id": "18:6411322828241804999",
+          "name": "scaleInPercent",
+          "type": 5
+        },
+        {
+          "id": "19:7034766968273731733",
+          "name": "drawOn",
+          "type": 5
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "4:8559543064585671348",
+  "lastIndexId": "0:0",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [
+    8530775943581485984,
+    2675620164385126104,
+    4672869878413007614,
+    5275065120401496850
+  ],
+  "retiredRelationUids": [],
+  "version": 1
+}

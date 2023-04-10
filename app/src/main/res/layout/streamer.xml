@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="@color/black">
+
+    <io.uslugi.libcommon.AspectFrameLayout
+        android:id="@+id/preview_afl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <SurfaceView
+            android:id="@+id/surface_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </io.uslugi.libcommon.AspectFrameLayout>
+
+    <io.uslugi.streamer.ui.AudioLevelMeter
+        android:id="@+id/audio_level_meter"
+        android:layout_width="30dp"
+        android:layout_height="240dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="2dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:visibility="invisible"
+        app:channels="2"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_bottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:ledCount="30"
+        app:redCount="3"
+        app:yellowCount="7" />
+
+    <TextView
+        android:id="@+id/text_capture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:padding="16dp"
+        android:textColor="@color/seventy_percent_white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        android:visibility="invisible"
+        tools:text="@string/STREAMER_START_TEXT" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_flash"
+        android:layout_width="@dimen/control_button_size"
+        android:layout_height="@dimen/control_button_size"
+        android:layout_marginTop="28dp"
+        android:alpha="0.3"
+        android:background="@drawable/button"
+        android:src="@drawable/flash_on"
+        android:text="@string/flash_torch"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/guideline_bottom"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/broadcast_time"
+        android:layout_width="78dp"
+        android:layout_height="@dimen/label_height"
+        android:layout_marginStart="8dp"
+        android:alpha="0.3"
+        android:background="@drawable/label"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline_top" />
+
+    <LinearLayout
+        android:id="@+id/rec_indicator"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="7dp"
+        android:alpha="0.7"
+        android:background="@drawable/rec_indicator"
+        android:orientation="vertical"
+        android:text="@+id/rec_indicator"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/broadcast_time"
+        app:layout_constraintTop_toTopOf="@+id/guideline_top" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/rec_only_warning"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:alpha="0.3"
+        android:background="@drawable/label"
+        android:gravity="center"
+        android:maxLines="2"
+        android:textColor="@color/yellow"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_bottom"
+        app:layout_constraintStart_toEndOf="@+id/audio_level_meter" />
+
+    <FrameLayout
+        android:id="@+id/indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/thermometer"
+        android:layout_width="14dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/thermometer"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/battery_view"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/CONTENT_DESCRIPTION_THERMOMETER"/>
+
+    <io.uslugi.streamer.ui.batterymeter.BatteryMeterView
+        android:id="@+id/battery_view"
+        android:layout_width="10dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="56dp"
+        app:batteryMeterChargeLevel="80"
+        app:batteryMeterChargingColor="#4caf50"
+        app:batteryMeterColor="@color/lime"
+        app:batteryMeterCriticalChargeLevel="15"
+        app:batteryMeterCriticalColor="#d84315"
+        app:batteryMeterIndicatorColor="@android:color/transparent"
+        app:batteryMeterIsCharging="true"
+        app:batteryMeterTheme="sharp"
+        app:batteryMeterUnknownColor="#e0e0e0"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="18dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="18dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="18dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

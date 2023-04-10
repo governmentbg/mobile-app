@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="stream_width">stream_width</string>
+    <string name="stream_height">stream_height</string>>
+    <string name="color_temperature_factor_default" translatable="false">65</string>
+    <string name="fps_range_min_key" translatable="false">fps_range_min</string>
+    <string name="fps_range_max_key" translatable="false">fps_range_max</string>
+    <string name="log_uri_key" translatable="false">log_uri</string>
+    <string name="layers_active_list_key" translatable="false">layers_active_list</string>
+    <string name="layers_preview_title">Preview</string>
+</resources>

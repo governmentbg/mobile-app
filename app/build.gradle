@@ -1,0 +1,112 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.objectbox'
+apply plugin: 'org.jetbrains.kotlin.android'
+apply plugin: 'androidx.navigation.safeargs.kotlin'
+
+final VERSION_CODE = 1
+final VERSION_NAME = "1.0.0"
+
+android {
+    compileSdkVersion 33
+    defaultConfig {
+        applicationId "io.uslugi.streamer"
+        minSdkVersion 28
+        targetSdkVersion 33
+        versionCode VERSION_CODE
+        versionName VERSION_NAME
+        multiDexEnabled true
+
+        Properties properties = new Properties()
+        properties.load(project.rootProject.file('local.properties').newDataInputStream())
+        buildConfigField "String", "HOME_SERVER_URL", "\""+properties.getProperty("HOME_SERVER_URL")+"\""
+
+        resValue "string", "VERSION_DATA", VERSION_NAME + " (" + VERSION_CODE + ")"
+
+        // Restrict the native libraries to arm64-v8a architecture
+        ndk {
+            abiFilters "arm64-v8a"
+        }
+    }
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            packagingOptions {
+                jniLibs {
+                    useLegacyPackaging = false
+                }
+            }
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            packagingOptions {
+                jniLibs {
+                    useLegacyPackaging = false
+                }
+            }
+        }
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_11
+            targetCompatibility JavaVersion.VERSION_11
+        }
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    dataBinding {
+        enabled = true
+    }
+
+    repositories {
+        maven { url 'https://raw.github.com/saki4510t/libcommon/master/repository/' }
+        maven { url 'https://jitpack.io' }
+    }
+
+    dependencies {
+        // Larix Broadcasting Android SDK
+        implementation project(':libcommon')
+        implementation fileTree(dir: 'libs', include: ['libstream-release.aar'])
+
+        // App dependencies: database, ui, qr codes, etc.
+        implementation 'androidx.annotation:annotation:1.5.0'
+        implementation 'androidx.appcompat:appcompat:1.6.1'
+        implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+        implementation 'androidx.lifecycle:lifecycle-viewmodel:2.5.1'
+        implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+        implementation 'androidx.multidex:multidex:2.0.1'
+        implementation 'androidx.preference:preference:1.2.0'
+        implementation 'com.github.seancfoley:ipaddress:5.3.4'
+        implementation 'com.google.android.material:material:1.8.0'
+        implementation 'com.google.zxing:core:3.5.1'
+
+        implementation('com.serenegiant:common:2.12.4') {
+            exclude module: 'support-v4'
+        }
+
+        // Navigation component
+        implementation 'androidx.navigation:navigation-runtime-ktx:2.5.3'
+        implementation("androidx.navigation:navigation-fragment-ktx:2.5.3")
+        implementation("androidx.navigation:navigation-ui-ktx:2.5.3")
+
+        // Gson
+        implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+        implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
+        implementation 'com.squareup.okhttp3:logging-interceptor:4.7.2'
+        implementation 'com.squareup.okhttp3:okhttp:4.10.0'
+
+        // QR code scanning
+        implementation 'com.github.yuriy-budiyev:code-scanner:2.3.2'
+
+        implementation 'com.squareup.okhttp3:logging-interceptor:4.7.2'
+        implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
+        implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+
+        // Jetpack Security
+        implementation 'androidx.security:security-crypto:1.1.0-alpha05'
+    }
+
+    namespace 'io.uslugi.streamer'
+}

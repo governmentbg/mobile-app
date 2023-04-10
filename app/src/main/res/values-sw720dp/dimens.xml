@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="control_button_radius">26dp</dimen>
+    <dimen name="control_button_size">52dp</dimen>
+</resources>
